@@ -12,5 +12,13 @@ import org.junit.runner.RunWith;
         tags = "@smoke",
         dryRun = false// mümkünse kullanmayın, stepleri compile edeceğiniz zaman kullanın, false ta kullan
 )
+/*
+"@tag" -> @tag ile etiketlenen senaryolar
+"@tag1 and not @tag2" -> @tag1 ile etiketlenen senaryolar, @tag2 ile etkilenmeyen senaryolar
+"@tag1 and @tag2" -> Her ikisi ile etiketlenen senaryolar @tag1 ve @tag2
+"@tag1 or @tag2" -> @tag1 ya da @tag2 ile etiketlenen senaryolar
+
+*/
+
 public class TagRunner {
 }
