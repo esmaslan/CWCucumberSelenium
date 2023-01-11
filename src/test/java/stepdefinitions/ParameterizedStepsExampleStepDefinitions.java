@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class ParameterizedStepsExampleStepDefinitions {
     private int int1,int2;
@@ -39,7 +40,13 @@ public class ParameterizedStepsExampleStepDefinitions {
 
     @Then("Sonuc {int} olmalidir")
     public void sonucOlmalidir(int sayi){
+        Assert.assertEquals(sayi, sonuc);
+    }
+    // RegEx Edition
 
+    @Given("^Ismim \"(\\w+)\"$")
+    public void ismim(String isim){
+        System.out.println(isim);
     }
 
 }
